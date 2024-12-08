@@ -803,8 +803,8 @@ class ContinuousSpaceWithTerrainAndCulture3d(ContinuousSpaceWithTerrainAndCultur
         a_3d_adjusted: Coordinate3d = cast("Coordinate3d", self.torus_adj(a_3d))
         b_3d_adjusted: Coordinate3d = cast("Coordinate3d", self.torus_adj(b_3d))
 
-        pos_a_vec = np.asfarray(a_3d_adjusted)
-        pos_b_vec = np.asfarray(b_3d_adjusted)
+        pos_a_vec = np.asarray(a_3d_adjusted, dtype=float)
+        pos_b_vec = np.asarray(b_3d_adjusted, dtype=float)
 
         vector_ab = pos_b_vec - pos_a_vec
         magnitude_ab = np.linalg.norm(vector_ab)
